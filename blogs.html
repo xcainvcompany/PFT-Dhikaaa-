@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhikaa | Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body { opacity: 0; transition: opacity 0.5s ease-in-out; }
+    body.fade-in { opacity: 1; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(109,67,0,0.25);
+    }
+    .project-box h3 {
+      color: rgb(109,67,0);
+      margin-bottom: 0.5rem;
+    }
+    .project-box p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>Exercise Team</span>
+      </div>
+      <div class="links">
+        <div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="about.html">About</a></div>
+        <div class="link"><a href="skills.html">Skills</a></div>
+        <div class="link"><a href="services.html">Services</a></div>
+        <div class="link"><a href="blogs.html">Projects</a></div>
+        <div class="link contact-btn"><a href="contact.html">Contact Us</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html">Projects</a>
+        <a href="contact.html">Contact Us</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="main-container">
+      <div class="content">
+        <h1>My Projects</h1>
+        <p>Here's a glimpse into some of the work and creative experiments I've done recently:</p>
+        <div class="projects-grid">
+          <div class="project-box" data-aos="fade-up">
+            <h3>Anime Portfolio Website</h3>
+            <p>A responsive personal site themed around anime aesthetics using HTML & CSS.</p>
+          </div>
+          <div class="project-box" data-aos="fade-up" data-aos-delay="100">
+            <h3>Verification Discord Bot</h3>
+            <p>A Node.js bot with email verification and role management features.</p>
+          </div>
+          <div class="project-box" data-aos="fade-up" data-aos-delay="200">
+            <h3>Landing Page UI Design</h3>
+            <p>Designed a clean modern landing page UI for a startup using Figma.</p>
+          </div>
+          <div class="project-box" data-aos="fade-up" data-aos-delay="300">
+            <h3>Blog Mockup Site</h3>
+            <p>Mock layout for a multi-category anime blog made with basic HTML/CSS/JS.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+    });
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>

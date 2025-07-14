@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhikaa | Skills</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body { opacity: 0; transition: opacity 0.5s ease-in-out; }
+    body.fade-in { opacity: 1; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .skill-box {
+      background: white;
+      padding: 1.2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skill-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(109,67,0,0.4);
+    }
+    .skill-box i {
+      font-size: 2rem;
+      color: rgb(109,67,0);
+      margin-bottom: 0.5rem;
+    }
+    .skill-box h3 {
+      font-size: 1.1rem;
+      color: rgb(109,67,0);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>Exercise Team</span>
+      </div>
+      <div class="links">
+        <div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="about.html">About</a></div>
+        <div class="link"><a href="skills.html">Skills</a></div>
+        <div class="link"><a href="services.html">Services</a></div>
+        <div class="link"><a href="blogs.html">Blogs</a></div>
+        <div class="link contact-btn"><a href="contact.html">Contact Us</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="contact.html">Contact Us</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="main-container">
+      <div class="content">
+        <h1>My Skills</h1>
+        <p>Here are some of the technologies and tools I work with:</p>
+        <div class="skills-grid">
+          <div class="skill-box" data-aos="fade-up"><i class="fa-brands fa-html5"></i><h3>HTML5</h3></div>
+          <div class="skill-box" data-aos="fade-up" data-aos-delay="100"><i class="fa-brands fa-css3-alt"></i><h3>CSS3</h3></div>
+          <div class="skill-box" data-aos="fade-up" data-aos-delay="200"><i class="fa-brands fa-js"></i><h3>JavaScript</h3></div>
+          <div class="skill-box" data-aos="fade-up" data-aos-delay="300"><i class="fa-brands fa-react"></i><h3>React</h3></div>
+          <div class="skill-box" data-aos="fade-up" data-aos-delay="400"><i class="fa-brands fa-node-js"></i><h3>Node.js</h3></div>
+          <div class="skill-box" data-aos="fade-up" data-aos-delay="500"><i class="fa-solid fa-palette"></i><h3>UI/UX Design</h3></div>
+          <div class="skill-box" data-aos="fade-up" data-aos-delay="600"><i class="fa-brands fa-figma"></i><h3>Figma</h3></div>
+          <div class="skill-box" data-aos="fade-up" data-aos-delay="700"><i class="fa-brands fa-github"></i><h3>GitHub</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+    });
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>

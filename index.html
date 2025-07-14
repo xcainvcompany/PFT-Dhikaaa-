@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet"/>
+<title>Dhikaa | Exercise Team</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+</link></head>
+<body>
+<nav>
+<div class="nav-container">
+<div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+<span>Exercise Team</span>
+</div>
+<div class="links">
+<div class="link" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><a href="index.html">Home</a></div>
+<div class="link" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"><a href="about.html">About</a></div>
+<div class="link" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"><a href="skills.html">Skills</a></div>
+<div class="link" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"><a href="services.html">Services</a></div>
+<div class="link" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><a href="blogs.html">Blogs</a></div>
+<div class="link contact-btn" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000"><a href="contact.html">Contact Us</a></div>
+</div>
+<i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+</div>
+<div class="dropdown">
+<div class="links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="services.html">Services</a>
+<a href="blogs.html">Blogs</a>
+<a href="contact.html">Contact Us</a>
+<i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+</div>
+</div>
+</nav>
+<section>
+<div class="main-container">
+<div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+<img alt="" src="main.png"/>
+</div>
+<div class="content">
+<h1 data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">Hey I'm <span>Dhikaa</span></h1>
+<div class="typewriter" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000">I'm a <span></span></div>
+<p data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">I’m passionate about building web experiences that are fast, beautiful, and user-focused.
+            I love combining logic and design to create thoughtful, accessible interfaces with anime flavor.</p>
+<div class="social-links" data-aos="flip-down" data-aos-delay="1200" data-aos-duration="1000">
+<a href="https://github.com/xcainvcompany"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.facebook.com/farra.amalia.144"><i class="fa-brands fa-facebook"></i></a>
+<a href="www.linkedin.com/in/dhikaaa-dyugi-dpratama-50b154374"><i class="fa-brands fa-linkedin"></i></a>
+<a href="https://x.com/Faelynnn_"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
+<div class="btn" data-aos="zoom-out-left" data-aos-delay="1300" data-aos-duration="1000">
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+<button>Hire Me</button></a>
+</div>
+</div>
+</div>
+</section>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({ offset: 0 });
+  </script>
+<!-- Hamburger Menu -->
+<script>
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+<!-- TYPED.JS -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".typewriter span", {
+      strings: ["Developer Exercise", "Designer Exercise", "Junior Exercise"],
+      typeSpeed: 90,
+      backSpeed: 45,
+      loop: true
+    });
+  </script>
+<!-- Glow on Click -->
+<script>
+    function logoClick() {
+      const logo = document.querySelector('.logo-glow span');
+      logo.style.textShadow = '0 0 25px rgb(109,67,0), 0 0 50px rgb(109,67,0)';
+      setTimeout(() => logo.style.textShadow = '', 300);
+    }
+        </script>
+</body>
+<section></section>
+</html>

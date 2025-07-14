@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhikaa | Services</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body { opacity: 0; transition: opacity 0.5s ease-in-out; }
+    body.fade-in { opacity: 1; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .service-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(109,67,0,0.3);
+    }
+    .service-box i {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: rgb(109,67,0);
+    }
+    .service-box h3 {
+      color: rgb(109,67,0);
+      margin-bottom: 0.5rem;
+    }
+    .service-box p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>Exercise Team</span>
+      </div>
+      <div class="links">
+        <div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="about.html">About</a></div>
+        <div class="link"><a href="skills.html">Skills</a></div>
+        <div class="link"><a href="services.html">Services</a></div>
+        <div class="link"><a href="blogs.html">Blogs</a></div>
+        <div class="link contact-btn"><a href="contact.html">Contact Us</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="contact.html">Contact Us</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="main-container">
+      <div class="content">
+        <h1>My Services</h1>
+        <p>Here are some of the services I offer professionally or as freelance work:</p>
+        <div class="services-grid">
+          <div class="service-box" data-aos="fade-up">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Website Development</h3>
+            <p>Build responsive websites tailored for portfolios, personal projects, or businesses.</p>
+          </div>
+          <div class="service-box" data-aos="fade-up" data-aos-delay="100">
+            <i class="fa-solid fa-pencil-ruler"></i>
+            <h3>UI/UX Design</h3>
+            <p>Create clean, user-friendly interfaces with anime-inspired aesthetics and smooth UX.</p>
+          </div>
+          <div class="service-box" data-aos="fade-up" data-aos-delay="200">
+            <i class="fa-solid fa-robot"></i>
+            <h3>Discord Bot Setup</h3>
+            <p>Develop and configure custom Discord bots with verification, chatAI, or referral systems.</p>
+          </div>
+          <div class="service-box" data-aos="fade-up" data-aos-delay="300">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h3>Brand Design</h3>
+            <p>Design banners, logos, and social media content aligned with your brand identity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+    });
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>
